@@ -20,7 +20,7 @@ weatherform.addEventListener('submit',(e)=>
    }
     else{
 
-    fetch('http://localhost:3000/weather?address='+ans).then((response)=>{
+    fetch('/weather?address='+ans).then((response)=>{
         response.json().then((data)=>{
             if(data.error)
             {
