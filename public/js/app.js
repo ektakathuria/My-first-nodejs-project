@@ -22,7 +22,7 @@ weatherform.addEventListener('submit',(e)=>
     fetch('/weather?address='+ans).then((response)=>{
         response.json().then((data)=>{
             if(data.error)
-            {console.log(data.error)
+            {
                 msgone.textContent=data.error
             }
             else
