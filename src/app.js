@@ -1,7 +1,7 @@
 const express=require('express')
 const forecast=require('./utilis/forecast.js')
 const geocode=require('./utilis/geocode.js')
-const port=process.env.PORT
+
 const app=express()
 const path=require('path')
 const hbs=require('hbs')
@@ -11,7 +11,6 @@ const viewpath=path.join(__dirname,'../templates/views')
 app.set('views',viewpath)
 app.set('view engine','hbs')
 const publicpath=path.join(__dirname,'../public')
-app.use(express.static(publicpath))
 app.get('',(req,res)=>{
 res.render('index',{
     'title':"Weather",
@@ -71,7 +70,7 @@ app.get('*',(req,res)=>{
         name:"Latika Sardana"
     })
 })
-app.listen(port,()=>{
-    console.log("Server is on port "+port)
+app.listen(3050,()=>{
+    console.log("Server is on port ")
 
 })
