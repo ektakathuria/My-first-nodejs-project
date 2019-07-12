@@ -70,7 +70,7 @@ app.get('*',(req,res)=>{
         name:"Latika Sardana"
     })
 })
-app.listen(3300,()=>{
+app.listen(port,()=>{
     
 
 })
