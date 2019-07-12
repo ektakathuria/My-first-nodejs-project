@@ -10,9 +10,10 @@ request({
         callback("please try with another coordinates",undefined)
     }else{
         callback(undefined,{
-            'weather' : body.currently.summary,
+            'weather' : body.daily.data[0].summary,
             'temperature':body.currently.temperature,
-           'rain': body.currently.precipProbability
+           'rain': body.currently.precipProbability,
+           'high_temp':body.daily.data[0].temperatureHigh
         })
     }
 })

@@ -51,6 +51,7 @@ app.get('/weather',(req,res)=>{
                 location,
                 forecast:forecastdata,
                 Address:req.query.address
+                
             })
         })
     })
